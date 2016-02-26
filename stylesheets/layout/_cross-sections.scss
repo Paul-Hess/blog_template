@@ -1,0 +1,24 @@
+.cross-section {
+	height: 100%;
+	float: left;
+}
+
+.crown {
+	.cross-section {
+		width: $crown-width;
+	}
+} 
+
+
+.trunk {
+	.cross-section {
+		width: $trunk-width;
+	}
+}
+
+
+.root {
+	.cross-section {
+		width: $root-width;
+	}
+}

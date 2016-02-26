@@ -1,0 +1,15 @@
+.layer {
+	width: 100%;
+}
+
+.layer.crown {
+	height: $crown-height;
+}
+
+.layer.trunk {
+	height: $trunk-height;
+}
+
+.layer.root {
+	height: $root-height;
+}
