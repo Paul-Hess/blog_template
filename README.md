@@ -9,6 +9,10 @@
 _Blog Template is an exercise in basic CSS practices with use of floats, postioning and various other stylings._ 
 
 ## Setup and Installation Requirements
+
+		Follow this link: link[http://paul-hess.github.io/blog_template]
+
+		or:
     
     Clone the repo.
     Navigate to the folder (for example using finder on MAC).
