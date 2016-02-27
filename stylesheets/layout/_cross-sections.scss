@@ -1,24 +1,85 @@
 .cross-section {
-	height: 100%;
-	float: left;
-}
-
-.crown {
-	.cross-section {
-		width: $crown-width;
-	}
-} 
-
-
-.trunk {
-	.cross-section {
+	width: $mobile-div;
+	margin: 2vh auto;
+	color: $color-light-main;
+	box-shadow: .5px .2px rgba($color-light-main, .5);
+	@include media(min-width 820px, 5) {
+		@include span-columns(1 of 5);
+		@include display-context(table);
 		width: $trunk-width;
 	}
 }
 
 
+
+
+
+.trunk {
+
+	&:nth-child(6) .cross-section:first-of-type {
+		@include media(min-width 820px, 5) {
+			@include shift-in-context(1.25 of 5);
+		}	
+	}
+
+	&:nth-child(7) .cross-section, &:nth-child(8) .cross-section, &:nth-child(9) .cross-section {
+		@include media(min-width 820px, 5) {
+			@include fill-parent;
+		}
+	}
+
+
+}
+
+.crown {
+
+	&:nth-child(4), &:nth-child(5) {
+	& .cross-section {
+		box-shadow: none;
+	}
+}
+
+	&:nth-child(3) {
+		& .cross-section:first-child {
+			@include media(min-width 820px, 5) {
+				@include shift-in-context(.5 of 5);
+			}	
+		}
+	}
+
+	&:first-child .cross-section {
+		&:first-child {
+			background: linear-gradient(to right, rgba($color-light-main,.6) 0%,  rgba($color-dark-main,.7) 100%), url('#{$img}/rose.jpg') no-repeat 20% 20%;
+			margin-top: 0;
+			height: 70vh;
+			@include media(min-width 820px, 5) {
+				@include fill-parent;
+			}
+		}
+	}
+
+	&:nth-child(2) .cross-section {
+		@include media(min-width 820px, 5) {
+			@include shift-in-context(2 of 5);
+		}
+	}
+
+}
+
+
+
 .root {
 	.cross-section {
-		width: $root-width;
+		@extend %root_style;
+		width: $mobile-div-small;
 	}
+
+	&:nth-child(13) .cross-section:first-child, &:nth-child(14) .cross-section:first-child {
+		@include shift-in-context(.5 of 3);
+	}
+
+	@include media(min-width 820px) {
+		width: $root-width; 
+	}
+
 }

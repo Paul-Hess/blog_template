@@ -32,3 +32,50 @@
   }
 }
 
+@mixin img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: $radius;
+}
+
+
+@mixin fa-icon-flip($horiz, $vert, $rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=#{$rotation});
+  -webkit-transform: scale($horiz, $vert);
+      -ms-transform: scale($horiz, $vert);
+          transform: scale($horiz, $vert);
+}
+
+
+@mixin custom_button {
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
+  background: transparent;
+  border: none;
+  border: 2px solid $color-branch;
+  outline: none;
+  width: $input-width + 1.2;
+  color: $color-branch-trans;
+  @include on-event {
+    color: $color-branch;
+  }
+}
+
+@mixin custom_input {
+  background: rgba(255,255,255, .1);
+  padding: 0;
+  -ms-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box; 
+  box-sizing:content-box;
+  color: $color-root;
+  border: none;
+  border: 2px solid $color-branch;
+  outline: none;
+  display: block;
+  width: $input-width;
+}
+
+

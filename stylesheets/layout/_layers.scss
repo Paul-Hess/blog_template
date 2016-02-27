@@ -1,15 +1,22 @@
 .layer {
-	width: 100%;
+ @include row;
+ @include display-context(table);
+ @include media(min-width 820px, 5) {
+ 		@include span-columns(5);
+ 		@include display-context(table);
+ }
+
 }
 
 .layer.crown {
-	height: $crown-height;
 }
 
 .layer.trunk {
-	height: $trunk-height;
 }
 
 .layer.root {
-	height: $root-height;
+	@include span-columns(3 of 3);
+	@include media(min-width 820px, 5) {
+		@include span-columns(5);
+	}
 }

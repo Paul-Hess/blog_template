@@ -1,0 +1,10 @@
+.trunk .cross-section img {
+	@include img;
+}
+
+.crown:nth-child(4), .crown:nth-child(5) {
+	.cross-section img {
+		@include img;
+	}
+	
+} 

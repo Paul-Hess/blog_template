@@ -1,3 +1,4 @@
 .tree {
-	width: 100vw;
+	@include outer-container;
+	background: $color-dark-main;
 }

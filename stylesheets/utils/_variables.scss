@@ -29,7 +29,7 @@ $color-branch: #CCFFCC;
 
 $color-branch-trans: rgba($color-branch, .6);
 
-$color-root: $color-dark-main * 2;
+$color-root: darken($color-dark-main, 10%);
 
 $color-root-trans: rgba($color-root, .6);
 
@@ -54,7 +54,24 @@ $mid-grey: rgb(153, 153, 153) !default;
 /// @type Color
 $dark-grey: rgb(68, 68, 68) !default;
 
+
+
+
 // custom div widths 
+
+// // mobile sizes
+
+$layer-height: 80vh;
+
+$mobile-div: 80%;
+
+$mobile-height: $layer-height/4;
+
+$mobile-div-small: $mobile-div / 3;
+
+$mobile-small-height: $mobile-div-small;
+
+// // mean sizes
 
 $trunk-width: 20vw;
 
@@ -66,13 +83,19 @@ $crown-height: $crown-width / 2;
 
 $root-width: $trunk-height;
 
-$root-height: $root-width / 2;
+$root-height: $root-width * 4;
+
+$radius: 5px;
+
+$input-width: 100%;
+
+
 
 
 
 /// Container's maximum width
 /// @type Length
-$max-width: 1180px !default;
+$max-width: 1800px !default;
 
 
 
@@ -98,3 +121,10 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+
+$fa-font: '../font';
+
+$img: '../img';
+
+

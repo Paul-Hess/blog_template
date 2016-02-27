@@ -1,0 +1,23 @@
+
+// globals
+
+a {
+	color: $color-light-main;
+	text-decoration: none;
+	width: 100%;
+	@include on-event {
+		color: rgba($color-light-main, 0.6);
+
+	}
+}
+
+.crown {
+	&:first-child p {
+		display: inline;
+		width: 20%;
+		margin: auto;
+		padding: 2vw;
+		font-size: 2em;
+	}
+
+}

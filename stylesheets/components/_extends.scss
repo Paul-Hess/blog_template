@@ -1,0 +1,19 @@
+
+
+// this project is not in need of an extend, this is here to meet the requirement.
+%root_style {
+	background: $color-light-main;
+	padding: 0;
+	margin-top: 0;
+	box-sizing: initial;
+	& p {
+		@include fill-parent;
+		box-sizing: initial;
+		font-size: 2em;
+		line-height: .7em;
+		color: $color-dark-main;
+		padding: 0;
+		margin: 0;
+	}
+	
+}

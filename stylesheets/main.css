@@ -1,3 +1,9 @@
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -369,16 +375,6 @@ html {
   box-sizing: inherit; }
 
 /**
- * Basic styles for links
- */
-a {
-  color: #e50050;
-  text-decoration: none; }
-  a:hover, a:active, a:focus {
-    color: #222222;
-    text-decoration: underline; }
-
-/**
  * Basic typography style for copy text
  */
 body {
@@ -400,7 +396,7 @@ body {
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: 1180px;
+  max-width: 1800px;
   /* 1 */
   margin-left: auto;
   /* 2 */
@@ -441,35 +437,172 @@ body {
   width: 1px; }
 
 .tree {
-  width: 100vw; }
+  max-width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #966F33; }
+  .tree::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+a {
+  color: #FFFFCC;
+  text-decoration: none;
+  width: 100%; }
+  a:hover, a:active, a:focus {
+    color: rgba(255, 255, 204, 0.6); }
+
+.crown:first-child p {
+  display: inline;
+  width: 20%;
+  margin: auto;
+  padding: 2vw;
+  font-size: 2em; }
 
 .cross-section {
-  height: 100%;
-  float: left; }
+  width: 80%;
+  margin: 2vh auto;
+  color: #FFFFCC;
+  box-shadow: 0.5px 0.2px rgba(255, 255, 204, 0.5); }
+  @media screen and (min-width: 820px) {
+    .cross-section {
+      float: left;
+      display: block;
+      margin-right: 5.85151%;
+      width: 15.3188%;
+      width: 20vw; }
+      .cross-section:last-child {
+        margin-right: 0; } }
 
-.crown .cross-section {
-  width: 20vw; }
+@media screen and (min-width: 820px) {
+  .trunk:nth-child(6) .cross-section:first-of-type {
+    margin-left: 26.46288%; } }
+@media screen and (min-width: 820px) {
+  .trunk:nth-child(7) .cross-section, .trunk:nth-child(8) .cross-section, .trunk:nth-child(9) .cross-section {
+    width: 100%; } }
 
-.trunk .cross-section {
-  width: 20vw; }
+.crown:nth-child(4) .cross-section, .crown:nth-child(5) .cross-section {
+  box-shadow: none; }
+@media screen and (min-width: 820px) {
+  .crown:nth-child(3) .cross-section:first-child {
+    margin-left: 10.58515%; } }
+.crown:first-child .cross-section:first-child {
+  background: linear-gradient(to right, rgba(255, 255, 204, 0.6) 0%, rgba(150, 111, 51, 0.7) 100%), url("../img/rose.jpg") no-repeat 20% 20%;
+  margin-top: 0;
+  height: 70vh; }
+  @media screen and (min-width: 820px) {
+    .crown:first-child .cross-section:first-child {
+      width: 100%; } }
+@media screen and (min-width: 820px) {
+  .crown:nth-child(2) .cross-section {
+    margin-left: 42.3406%; } }
 
 .root .cross-section {
-  width: 10vw; }
+  width: 26.66667%; }
+.root:nth-child(13) .cross-section:first-child, .root:nth-child(14) .cross-section:first-child {
+  margin-left: 18.35807%; }
+@media screen and (min-width: 820px) {
+  .root {
+    width: 10vw; } }
 
 .layer {
-  width: 100%; }
-
-.layer.crown {
-  height: 10vw; }
-
-.layer.trunk {
-  height: 10vw; }
+  display: block; }
+  .layer::after {
+    clear: both;
+    content: "";
+    display: table; }
+  @media screen and (min-width: 820px) {
+    .layer {
+      float: left;
+      display: block;
+      margin-right: 5.85151%;
+      width: 100%; }
+      .layer:last-child {
+        margin-right: 0; } }
 
 .layer.root {
-  height: 5vw; }
+  float: left;
+  display: block;
+  margin-right: 10.1484%;
+  width: 100%; }
+  .layer.root:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 820px) {
+    .layer.root {
+      float: left;
+      display: block;
+      margin-right: 5.85151%;
+      width: 100%; }
+      .layer.root:last-child {
+        margin-right: 0; } }
 
-div {
-  border: 1px dotted #966F33;
-  min-height: 25px; }
+button {
+  box-sizing: border-box;
+  display: block;
+  margin: auto;
+  background: transparent;
+  border: none;
+  border: 2px solid #CCFFCC;
+  outline: none;
+  width: 101.2%;
+  color: rgba(204, 255, 204, 0.6); }
+  button:hover, button:active, button:focus {
+    color: #CCFFCC; }
+
+.root .cross-section {
+  background: #FFFFCC;
+  padding: 0;
+  margin-top: 0;
+  box-sizing: initial; }
+  .root .cross-section p {
+    width: 100%;
+    box-sizing: initial;
+    font-size: 2em;
+    line-height: .7em;
+    color: #966F33;
+    padding: 0;
+    margin: 0; }
+
+.trunk .cross-section img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 5px; }
+
+.crown:nth-child(4) .cross-section img, .crown:nth-child(5) .cross-section img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 5px; }
+
+input {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0;
+  -ms-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  color: #705326;
+  border: none;
+  border: 2px solid #CCFFCC;
+  outline: none;
+  display: block;
+  width: 100%; }
+  input::placeholder {
+    color: rgba(204, 255, 204, 0.6);
+    font-size: 3em; }
+    input::placeholder::-webkit-input-placeholder {
+      color: #705326;
+      opacity: 1; }
+    input::placeholder::-moz-placeholder {
+      color: #705326;
+      opacity: 1; }
+    input::placeholder:-moz-placeholder {
+      color: #705326;
+      opacity: 1; }
+    input::placeholder:-ms-input-placeholder {
+      color: #705326;
+      opacity: 1; }
 
 /*# sourceMappingURL=main.css.map */

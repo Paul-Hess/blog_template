@@ -1,0 +1,12 @@
+input {
+	@include custom_input;
+	&::placeholder {
+		color: $color-branch-trans;
+		font-size: 3em;
+
+		@include placeholder {
+			color: $color-root;
+			opacity: 1;
+		}
+	}
+}

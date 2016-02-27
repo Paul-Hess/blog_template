@@ -8,6 +8,8 @@
 
 // 2. Vendors
 @import
+  'vendor/bourbon/bourbon',
+  'vendor/neat/neat',
   'vendor/normalize';
 
 // 3. Base stuff
@@ -20,16 +22,18 @@
 // 4. Layout-related sections
 @import
   'layout/containers',
+  'layout/content',
   'layout/cross-sections',
   'layout/header',
-  'layout/footer',
-  
-  
+  'layout/footer',  
   'layout/layers';
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/extends',
+  'components/img',
+  'components/inputs';
 
 // 6. Page-specific styles
 @import
@@ -38,9 +42,3 @@
 // 7. Themes
 @import
   'themes/default';
-
-
-div {
-  border: 1px dotted $color-dark-main;
-  min-height: 25px;
-}
